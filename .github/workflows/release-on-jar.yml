@@ -1,9 +1,9 @@
-name: Release New Archive File
+name: Release New Archive JAR
 
 on:
   push:
     paths:
-      - 'Archive/**'
+      - 'Archive/**/*.jar'
     branches:
       - main
 
@@ -15,17 +15,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Get latest file in Archive folder
-        id: latest_file
+      - name: Find latest .jar in Archive/
+        id: latest_jar
         run: |
-          FILE=$(find Archive -type f | sort -r | head -n 1)
+          FILE=$(find Archive -type f -name "*.jar" | sort -r | head -n 1)
           echo "file_path=$FILE" >> $GITHUB_OUTPUT
           echo "file_name=$(basename "$FILE")" >> $GITHUB_OUTPUT
 
-      - name: Calculate SHA-256
+      - name: Calculate SHA-256 of .jar
         id: sha256
         run: |
-          HASH=$(sha256sum "${{ steps.latest_file.outputs.file_path }}" | awk '{print $1}')
+          HASH=$(sha256sum "${{ steps.latest_jar.outputs.file_path }}" | awk '{print $1}')
           echo "sha256=$HASH" >> $GITHUB_OUTPUT
 
       - name: Extract version from pchatt.mcreator
@@ -92,6 +92,6 @@ jobs:
             </details>
 
             The file SHA-256 Hash Is: `${{ steps.sha256.outputs.sha256 }}`
-          files: ${{ steps.latest_file.outputs.file_path }}
+          files: ${{ steps.latest_jar.outputs.file_path }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
