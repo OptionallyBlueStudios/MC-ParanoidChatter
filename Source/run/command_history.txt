@@ -1,0 +1,13 @@
+/tick sprint 60s
+/tick rate 40
+/tick rate 60
+/tick rate 100
+/tick rate 200
+/tick rate 500
+/tick rate 20
+/tick step 100t
+/tick freeze
+/tick step 100t
+/tick step 2100t
+/tick unfreeze
+/time set 30000

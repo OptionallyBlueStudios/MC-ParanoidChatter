@@ -1,0 +1,96 @@
+{
+  "mod_elements": [
+    {
+      "name": "RandomMessage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_message",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/stfzy/neomc/paranoidchatter/procedures/RandomMessageProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PchatDEV",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pchat_dev",
+      "metadata": {
+        "files": [
+          "src/main/java/net/stfzy/neomc/paranoidchatter/command/PchatDEVCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "PChatMenu",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pchat_menu_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/stfzy/neomc/paranoidchatter/client/screens/PChatMenuOverlay.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gui.paranoidchatter.pchat_menu_overlay.label_its_at_your_door": "its at your door.."
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/stfzy/neomc/paranoidchatter/ParanoidchatterMod.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/resources/META-INF/neoforge.mods.toml"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "pchatt",
+    "modName": "paranoid chatter",
+    "version": "1.0.0",
+    "description": "its here. its watching. its chatting.",
+    "author": "Stuf_y, OptionallyBlueStudios",
+    "websiteURL": "https://github.com/OptionallyBlueStudios/MC-ParanoidChatter",
+    "license": "GNU General Public License version 3 (GPLv3)",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "Credits to the paranoia mod for minecraft for giving me some of the ideas! Thanks :). The logo is also a remix of the paranoia mod logo.",
+    "modElementsPackage": "net.stfzy.neomc.paranoidchatter"
+  },
+  "mcreatorVersion": 202500228610
+}

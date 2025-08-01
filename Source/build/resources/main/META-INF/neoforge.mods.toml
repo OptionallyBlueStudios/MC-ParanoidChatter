@@ -1,0 +1,39 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="GNU General Public License version 3 (GPLv3)"
+
+[[mods]]
+modId="pchatt"
+version="1.0.0"
+displayName="paranoid chatter"
+displayURL="https://github.com/OptionallyBlueStudios/MC-ParanoidChatter"
+credits="Credits to the paranoia mod for minecraft for giving me some of the ideas! Thanks :). The logo is also a remix of the paranoia mod logo."
+authors="Stuf_y, OptionallyBlueStudios"
+description="its here. its watching. its chatting."
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+
+# Start of user code block custom mixins
+# End of user code block custom mixins
+
+[[dependencies.pchatt]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.176,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.pchatt]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration
