@@ -94,4 +94,4 @@ jobs:
             The file SHA-256 Hash Is: `${{ steps.sha256.outputs.sha256 }}`
           files: ${{ steps.latest_jar.outputs.file_path }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
